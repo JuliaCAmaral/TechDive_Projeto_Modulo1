@@ -20,14 +20,6 @@ public class ModuleService {
     }
 
     public void insert(ModuleEntity moduleEntity) {
-        /*
-        for (ModuleEntity entity : moduleDAO.getByTrailId(moduleEntity.trailId)) {
-            if (entity.id != 0) {
-                throw new InvalidParameterException("")
-            }
-        }
-
-         */
 
         if (trailDAO.get(moduleEntity.trailId) == null)  {
             throw new InvalidParameterException("Trilha inválida.");
